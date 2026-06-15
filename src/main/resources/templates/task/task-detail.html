@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>タスク詳細</title>
+</head>
+<body>
+
+<h1>タスク詳細</h1>
+
+<div>
+    <p>タスク名：<span th:text="${task.title}"></span></p>
+    <p>タスク説明：<span th:text="${task.description}"></span></p>
+    <p>優先度：<span th:text="${task.priority}"></span></p>
+    <p>ステータス：<span th:text="${task.status}"></span></p>
+    <p>作成日時：<span th:text="${task.createdAt}"></span></p>
+</div>
+
+<br>
+
+<a th:href="@{/tasks}">タスク一覧へ</a>
+
+</body>
+</html>
